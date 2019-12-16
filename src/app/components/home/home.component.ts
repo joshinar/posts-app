@@ -12,4 +12,8 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.postService.getPosts().subscribe(data => (this.posts = data));
   }
+
+  onNewPost(post) {
+    this.posts.unshift(post);
+  }
 }
